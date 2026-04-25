@@ -13,7 +13,7 @@ const ACTUALITES_DATA = [
     category: "Événement",
     lieu: "Gymnase Fond Calde",
     emoji: "🎪",
-    image: "",
+    image: "assets/evenements/gala.png",
     excerpt: "Le gala annuel du Céret Gym Club sur le thème du cinéma !"
   },
   {
@@ -23,7 +23,7 @@ const ACTUALITES_DATA = [
     category: "Événement",
     lieu: "",
     emoji: "📋",
-    image: "",
+    image: "assets/evenements/reinscriptions.png",
     excerpt: "Les inscriptions pour la saison 2026/2027 sont désormais ouvertes en ligne sur HelloAsso. Toutes les disciplines, tous les niveaux. N'attendez pas, les places sont limitées !"
   },
   {
@@ -33,17 +33,7 @@ const ACTUALITES_DATA = [
     category: "Événement",
     lieu: "Gymnase de Céret",
     emoji: "🏃",
-    image: "",
+    image: "assets/evenements/stage.png",
     excerpt: ""
-  },
-  {
-    id: "partenariat-torrea",
-    title: "Nouveau partenaire : Torréa, café de spécialité",
-    date: "septembre 2025",
-    category: "Événement",
-    lieu: "",
-    emoji: "☕",
-    image: "",
-    excerpt: "Le Céret Gym Club accueille Torréa comme nouveau partenaire officiel pour la saison 2025/2026. Merci pour votre soutien qui contribue au développement de notre club !"
   }
 ];

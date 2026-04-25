@@ -122,4 +122,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const footTarget = document.getElementById('footer-placeholder');
   if (footTarget) footTarget.outerHTML = buildFooter();
+
+  /* Hamburger toggle — doit s'initialiser après injection de la navbar */
+  const toggle = document.querySelector('.navbar-toggle');
+  const nav    = document.querySelector('.navbar-nav');
+  if (toggle && nav) {
+    toggle.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+    nav.querySelectorAll('a').forEach(a =>
+      a.addEventListener('click', () => nav.classList.remove('open'))
+    );
+  }
 });

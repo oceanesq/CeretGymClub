@@ -6,11 +6,11 @@
 
 const GALERIE_DATA = [
   {
-    "src": "assets/gallery/compet1.png",
+    "src": "assets/gallery/Juliette.png",
     "alt": ""
   },
   {
-    "src": "assets/gallery/compet2.png",
+    "src": "assets/gallery/N7_11+.png",
     "alt": ""
   }
 ];

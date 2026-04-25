@@ -1,5 +1,6 @@
 /* =============================================
    PARTENAIRES DU CLUB
+   logo : (optionnel) nom du fichier dans assets/partenaires/
    ============================================= */
 
 const PARTENAIRES_DATA = [
@@ -8,6 +9,7 @@ const PARTENAIRES_DATA = [
     location: "Arles-sur-Tech",
     url: "https://www.patisserie-touron.com",
     emoji: "🍰",
+    logo: "logo_PatissserieTourron.png",
     description: "Artisan pâtissier"
   },
   {
@@ -15,6 +17,7 @@ const PARTENAIRES_DATA = [
     location: "Région Céret",
     url: null,
     emoji: "✨",
+    logo: "",
     description: "Services de nettoyage"
   },
   {
@@ -22,6 +25,7 @@ const PARTENAIRES_DATA = [
     location: "Céret",
     url: null,
     emoji: "🚗",
+    logo: "",
     description: "Concessionnaire automobile"
   },
   {
@@ -29,6 +33,7 @@ const PARTENAIRES_DATA = [
     location: "Région Céret",
     url: null,
     emoji: "☕",
+    logo: "logo_TORREA.webp",
     description: "Café de spécialité"
   },
   {
@@ -36,6 +41,7 @@ const PARTENAIRES_DATA = [
     location: "Céret",
     url: "mailto:privat-bartho@hotmail.com",
     emoji: "🏗️",
+    logo: "logo_Privat-Bartho.jpg",
     description: "Maçonnerie générale & rénovation"
   }
 ];

@@ -13,20 +13,6 @@
     if (scrollTop) scrollTop.classList.toggle('visible', window.scrollY > 400);
   });
 
-  /* Hamburger toggle */
-  const toggle = document.querySelector('.navbar-toggle');
-  const nav    = document.querySelector('.navbar-nav');
-  if (toggle && nav) {
-    toggle.addEventListener('click', () => {
-      const open = nav.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', open);
-    });
-    /* Close on link click */
-    nav.querySelectorAll('a').forEach(a =>
-      a.addEventListener('click', () => nav.classList.remove('open'))
-    );
-  }
-
   /* Active link */
   const currentPage = location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.navbar-nav a').forEach(a => {
@@ -399,6 +385,8 @@
       grid.appendChild(card);
     });
   }
+
+  
 })();
 
 /* --- Filter buttons (actualites) --- */

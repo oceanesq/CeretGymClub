@@ -415,6 +415,13 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.6rem); }
   background-position: center;
 }
 
+.news-card-img--logo {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--white);
+}
+
 .news-card-img--photo::before {
   content: '';
   position: absolute;
@@ -893,6 +900,7 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.6rem); }
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 1.5rem;
+  justify-content: center;
 }
 
 .valeur-card {
@@ -901,6 +909,7 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.6rem); }
   padding: 2rem 1.5rem;
   text-align: center;
   box-shadow: var(--shadow);
+  transition: transform var(--transition);
 }
 
 .valeur-icon { font-size: 2.5rem; margin-bottom: .75rem; }
