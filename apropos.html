@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>À propos — Céret Gym Club</title>
+  <meta name="description" content="Découvrez l'histoire, l'équipe et les valeurs du Céret Gym Club, club de gymnasique affilié à l'UFOLEP à Céret, Pyrénées-Orientales.">
+  <meta property="og:title" content="À propos — Céret Gym Club">
+  <meta property="og:image" content="assets/logo.png">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+  <div id="navbar-placeholder"></div>
+
+  <header class="page-hero">
+    <div class="container">
+      <h1>À propos du club</h1>
+      <p>Notre histoire, nos valeurs, notre équipe</p>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- HISTOIRE -->
+    <section class="section" aria-labelledby="histoire-title">
+      <div class="container">
+        <div class="about-story">
+          <div class="about-story-text reveal">
+            <h2 id="histoire-title">Notre histoire</h2>
+            <p>Fondé en <strong>[ANNÉE]</strong>, le Céret Gym Club est né de la passion de quelques habitants de Céret pour la Gymnasique. Depuis sa création, le club n'a cessé de grandir pour devenir aujourd'hui un pilier sportif de la ville et de la région.</p>
+            <p>Implanté au cœur des Pyrénées-Orientales, dans la belle ville de Céret, notre association accueille chaque année des gymnastes de tous âges et de tous niveaux, du tout-petit qui découvre les agrès en compagnie de ses parents, jusqu'à la gymnaste compétitrice qui représente le club aux championnats régionaux.</p>
+            <p>Affilié à l'<strong>UFOLEP</strong> (Union Française des Œuvres Laïques d'Éducation Physique), le Céret Gym Club partage les valeurs humanistes et d'ouverture de cette fédération : sport pour toutes et tous, dans un esprit de fraternité, d'égalité et de respect.</p>
+          </div>
+          <div class="about-visual reveal" aria-hidden="true">
+            <img src="assets/logo.png" alt="Logo Céret Gym Club" style="width:60%;height:auto;margin:auto;opacity:.8;">
+          </div>
+        </div>
+
+        <!-- Stats (générées depuis data/club.js) -->
+        <div class="stats-row" id="stats-row" aria-label="Chiffres clés du club"></div>
+      </div>
+    </section>
+
+    <!-- VALEURS -->
+    <section class="section section-alt" aria-labelledby="valeurs-title">
+      <div class="container">
+        <h2 class="section-title" id="valeurs-title">Nos valeurs</h2>
+        <span class="gold-bar"></span>
+        <p class="section-subtitle">Ce qui nous guide au quotidien</p>
+        <div class="valeurs-grid">
+          <article class="valeur-card reveal">
+            <div class="valeur-icon" aria-hidden="true">🤝</div>
+            <h3>Bienveillance</h3>
+            <p>Un environnement sûr et encourageant où chaque enfant progresse à son rythme, sans jugement.</p>
+          </article>
+          <article class="valeur-card reveal">
+            <div class="valeur-icon" aria-hidden="true">📈</div>
+            <h3>Progression</h3>
+            <p>Chaque gymnaste est unique. Nos entraîneuses adaptent leur pédagogie pour faire progresser chacun.</p>
+          </article>
+          <article class="valeur-card reveal">
+            <div class="valeur-icon" aria-hidden="true">🎉</div>
+            <h3>Fun</h3>
+            <p>La gym, c'est avant tout du plaisir ! Nous veillons à ce que chaque cours soit un moment de joie.</p>
+          </article>
+          <article class="valeur-card reveal">
+            <div class="valeur-icon" aria-hidden="true">👨‍👩‍👧‍👦</div>
+            <h3>Famille</h3>
+            <p>Le club est une grande famille. Parents, enfants, encadrants — nous construisons quelque chose ensemble.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- BUREAU -->
+    <section class="section" aria-labelledby="bureau-title">
+      <div class="container">
+        <h2 class="section-title" id="bureau-title">Le bureau</h2>
+        <span class="gold-bar"></span>
+        <p class="section-subtitle">L'équipe dirigeante de l'association</p>
+        <!-- Bureau (généré depuis data/team.js) -->
+        <div class="team-grid" id="bureau-grid"></div>
+      </div>
+    </section>
+
+    <!-- ÉQUIPE ENCADRANTE -->
+    <section class="section section-alt" aria-labelledby="equipe-title">
+      <div class="container">
+        <h2 class="section-title" id="equipe-title">Notre équipe encadrante</h2>
+        <span class="gold-bar"></span>
+        <p class="section-subtitle">Des professionnelles passionnées à votre service</p>
+        <!-- Équipe (générée depuis data/team.js) -->
+        <div class="team-grid" id="team-grid"></div>
+      </div>
+    </section>
+
+    <!-- AFFILIATION -->
+    <section class="section" aria-labelledby="affil-title">
+      <div class="container" style="text-align:center;">
+        <h2 id="affil-title">Affilié à l'UFOLEP</h2>
+        <span class="gold-bar"></span>
+        <p style="max-width:620px;margin:2rem auto;color:var(--gray-700);">
+          L'UFOLEP est l'une des principales fédérations sportives françaises. Elle défend les valeurs du sport populaire, accessible à toutes et à tous. Être affilié à l'UFOLEP, c'est appartenir à un réseau de milliers de clubs qui partagent le même engagement pour un sport de qualité, sûr et bienveillant.
+        </p>
+        <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+          <a href="contact.html" class="btn btn-primary">Rejoindre le club</a>
+          <a href="tarifs.html" class="btn btn-outline">Voir les tarifs</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="data/club.js"></script>
+  <script src="data/partenaires.js"></script>
+  <script src="data/team.js"></script>
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

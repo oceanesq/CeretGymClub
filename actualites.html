@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Actualités — Céret Gym Club</title>
+  <meta name="description" content="Suivez toutes les actualités du Céret Gym Club : compétitions, résultats, événements, gala de fin d'année.">
+  <meta property="og:title" content="Actualités — Céret Gym Club">
+  <meta property="og:image" content="assets/logo.png">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+  <div id="navbar-placeholder"></div>
+
+  <header class="page-hero">
+    <div class="container">
+      <h1>Actualités</h1>
+      <p>Événements, compétitions, résultats et vie du club</p>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="section">
+      <div class="container">
+
+        <!-- Filtres -->
+        <div class="actu-filters" role="group" aria-label="Filtrer les actualités">
+          <button class="filter-btn active" data-filter="all">Tout voir</button>
+          <button class="filter-btn" data-filter="Événement">Événements & Vie du club</button>
+          <button class="filter-btn" data-filter="Résultats">Résultats compétitions</button>
+        </div>
+
+        <!-- Grille actualités -->
+        <div class="news-grid" id="news-grid" aria-label="Actualités du club"></div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="data/club.js"></script>
+  <script src="data/partenaires.js"></script>
+  <script src="data/actualites.js"></script>
+  <script src="data/competitions.js"></script>
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

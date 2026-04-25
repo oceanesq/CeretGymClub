@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galerie photos — Céret Gym Club</title>
+  <meta name="description" content="Galerie photo du Céret Gym Club : entraînements, compétitions, gala de fin d'année.">
+  <meta property="og:title" content="Galerie — Céret Gym Club">
+  <meta property="og:image" content="assets/logo.png">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+  <div id="navbar-placeholder"></div>
+
+  <header class="page-hero">
+    <div class="container">
+      <h1>Galerie photos</h1>
+      <p>Les beaux moments du Céret Gym Club en images</p>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="section">
+      <div class="container">
+
+        <!-- Galerie grid — remplie dynamiquement depuis assets/gallery/ -->
+        <div class="gallery-grid" id="gallery-grid" role="list" aria-label="Galerie photos du club"></div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Visionneuse de photos">
+    <div class="lightbox-inner">
+      <button class="lightbox-close" aria-label="Fermer la visionneuse">&times;</button>
+      <button class="lightbox-nav lightbox-prev" aria-label="Photo précédente">&#8249;</button>
+      <img src="" alt="" class="lightbox-img">
+      <button class="lightbox-nav lightbox-next" aria-label="Photo suivante">&#8250;</button>
+    </div>
+  </div>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="data/club.js"></script>
+  <script src="data/partenaires.js"></script>
+  <script src="data/galerie.js"></script>
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

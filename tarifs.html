@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarifs 2026/2027 — Céret Gym Club</title>
+  <meta name="description" content="Tarifs des cours 2026/2027 au Céret Gym Club : loisir, compétition, 1 ou 2 cours par semaine. Licences UFOLEP incluses.">
+  <meta property="og:title" content="Tarifs — Céret Gym Club">
+  <meta property="og:image" content="assets/logo.png">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+  <div id="navbar-placeholder"></div>
+
+  <header class="page-hero">
+    <div class="container">
+      <h1>Nos tarifs 2026/2027</h1>
+      <p>Des tarifs adaptés à tous, du loisir à la compétition</p>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="section">
+      <div class="container">
+
+        <h2 class="section-title">Cotisations annuelles</h2>
+        <span class="gold-bar"></span>
+        <p class="section-subtitle" id="tarifs-saison">Saison septembre 2026 — juin 2027 · Licence UFOLEP incluse</p>
+
+        <!-- Tarifs (générés depuis data/tarifs.js) -->
+        <div class="tarifs-grid" id="tarifs-grid">
+
+          <!-- Loisir 1 cours -->
+          <article class="tarif-card reveal">
+            <div class="tarif-category">Loisir</div>
+            <h3 class="tarif-name">1 cours / semaine</h3>
+            <div class="tarif-price"><span>€</span>À définir</div>
+            <p class="tarif-period">par an · licence incluse</p>
+            <ul class="tarif-features">
+              <li>1 séance hebdomadaire</li>
+              <li>GAF ou Parkour au choix</li>
+              <li>Licence UFOLEP incluse</li>
+              <li>Encadrement diplômé</li>
+              <li>Accès au gala de fin d'année</li>
+            </ul>
+          </article>
+
+          <!-- Loisir 2 cours -->
+          <article class="tarif-card reveal">
+            <div class="tarif-category">Loisir</div>
+            <h3 class="tarif-name">2 cours / semaine</h3>
+            <div class="tarif-price"><span>€</span>À définir</div>
+            <p class="tarif-period">par an · licence incluse</p>
+            <ul class="tarif-features">
+              <li>2 séances hebdomadaires</li>
+              <li>GAF ou Parkour</li>
+              <li>Licence UFOLEP incluse</li>
+              <li>Encadrement diplômé</li>
+              <li>Accès au gala de fin d'année</li>
+              <li>Progression accélérée</li>
+            </ul>
+          </article>
+
+          <!-- Compétition 1 cours -->
+          <article class="tarif-card reveal">
+            <div class="tarif-category">Compétition</div>
+            <h3 class="tarif-name">1 cours / semaine</h3>
+            <div class="tarif-price"><span>€</span>À définir</div>
+            <p class="tarif-period">par an · sur sélection</p>
+            <ul class="tarif-features">
+              <li>1 séance compétition / sem.</li>
+              <li>Section GAF compétition</li>
+              <li>Licence UFOLEP incluse</li>
+              <li>2 à 3 compétitions</li>
+              <li>Tenue de compétition à prévoir</li>
+            </ul>
+          </article>
+
+          <!-- Compétition 2 cours -->
+          <article class="tarif-card reveal">
+            <div class="tarif-category">Compétition</div>
+            <h3 class="tarif-name">2 cours / semaine</h3>
+            <div class="tarif-price"><span>€</span>À définir</div>
+            <p class="tarif-period">par an · sur sélection</p>
+            <ul class="tarif-features">
+              <li>2 séances compétition / sem.</li>
+              <li>Section GAF compétition</li>
+              <li>Licence UFOLEP incluse</li>
+              <li>2 à 3 compétitions</li>
+              <li>Tenue de compétition à prévoir</li>
+            </ul>
+          </article>
+
+        </div>
+
+        <!-- Note tarifs (générée depuis data/tarifs.js) -->
+        <div class="tarif-note reveal" id="tarif-note"></div>
+
+        <!-- CTA -->
+        <div style="text-align:center;margin-top:3rem;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;" id="tarifs-cta"></div>
+
+        <!-- Modes de paiement (généré depuis data/tarifs.js) -->
+        <div style="margin-top:3rem;padding:2rem;background:var(--gray-100);border-radius:var(--radius);text-align:center;">
+          <h3 style="color:var(--navy);margin-bottom:1rem;">Paiement</h3>
+          <p style="color:var(--gray-700);" id="tarif-paiement"></p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="data/club.js"></script>
+  <script src="data/partenaires.js"></script>
+  <script src="data/tarifs.js"></script>
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
