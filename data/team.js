@@ -17,14 +17,14 @@ const TEAM_DATA = {
       photo:        ""
     },
     {
-      nom:          "Prénom",
-      role:         "Vice-présidente",
+      nom:          "Celine",
+      role:         "Comptable",
       organisation: "Céret Gym Club",
       avatar:       "👩",
       photo:        ""
     },
     {
-      nom:          "Prénom",
+      nom:          "Audrey",
       role:         "Trésoriere",
       organisation: "Céret Gym Club",
       avatar:       "👩",
@@ -63,26 +63,86 @@ const TEAM_DATA = {
       photo:      ""
     },
     {
-      nom:        "[Aide-entraîneuse 1]",
+      nom:        "Zoe",
       role:       "Aide-entraîneuse",
       discipline: "Gymnasique Artistique Féminine",
       avatar:     "⭐",
       photo:      ""
     },
     {
-      nom:        "[Aide-entraîneuse 1]",
-      role:       "Aide-entraîneuse",
-      discipline: "Gymnasique Artistique Féminine",
-      avatar:     "⭐",
-      photo:      ""
-    },
-    {
-      nom:        "[Aide-entraîneuse 1]",
+      nom:        "Lucie",
       role:       "Aide-entraîneuse",
       discipline: "Gymnasique Artistique Féminine",
       avatar:     "⭐",
       photo:      ""
     }
+     /* Ajoutez d'autres aides entraineuses ici, ex :
+    {
+      nom:          "Prénom",
+      role:         "Aide-entraineuse",
+      organisation: "Céret Gym Club",
+      avatar:       "⭐",
+      photo:        ""
+    } */
+  ],
+  juges: [
+    {
+      nom:        "Anouchka",
+      diplome:       "BF2 : N8->N1",
+      discipline: "GAF, GAM",
+      avatar:     "🤸",
+      photo:      ""
+    },
+    {
+      nom:        "Lizzy",
+      diplome:       "BF2 : N8->N3",
+      discipline: "GAF",
+      avatar:     "🤸",
+      photo:      ""
+    },
+    {
+      nom:        "Radha",
+      diplome:       "BF2 : N8->N4",
+      discipline: "GAF",
+      avatar:     "🤸",
+      photo:      ""
+    },
+    {
+      nom:        "Maelya",
+      diplome:       "BF1 : N8->N7",
+      discipline: "GAF",
+      avatar:     "🤸",
+      photo:      ""
+    },
+    {
+      nom:        "Zoe",
+      diplome:       "BF1 : N8->N7",
+      discipline: "GAF",
+      avatar:     "🤸",
+      photo:      ""
+    },
+    {
+      nom:        "Lou-Naëlle",
+      diplome:       "BF1 : N8->N7",
+      discipline: "GAF",
+      avatar:     "🤸",
+      photo:      ""
+    },
+    {
+      nom:        "Oceane",
+      diplome:       "BF1 : N8->N7",
+      discipline: "GAF",
+      avatar:     "🤸",
+      photo:      ""
+    },
+     /* Ajoutez d'autres juges ici, ex :
+    {
+      nom:          "Prénom",
+      diplome:       "BF1 : N8->N7",
+      discipline: "GAF",
+      avatar:     "🤸",
+      photo:      ""
+    } */
   ]
 
 };

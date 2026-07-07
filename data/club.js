@@ -8,7 +8,7 @@ const CLUB_DATA = {
   /* Identité */
   nom:      "Céret Gym Club",
   saison:   "2026/2027",
-  fondation: "[ANNÉE]",           // Remplacez par l'année de fondation
+  fondation: "1995",           // Remplacez par l'année de fondation
 
   /* Inscription */
   helloasso: "https://www.helloasso.com/associations/ceretgymclub",

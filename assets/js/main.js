@@ -185,8 +185,8 @@
   /* Snap to full hours */
   const baseH  = Math.floor(minMin / 60);
   const endH   = Math.ceil(maxMin / 60);
-  const PX_PER_HALF = 40;           /* px height per 30-min slot */
-  const HALF_SLOTS  = (endH - baseH) * 2;
+  const PX_PER_HALF = 20;           /* px height per 15-min slot */
+  const HALF_SLOTS  = (endH - baseH) * 4;
 
   /* Grid template */
   grid.style.gridTemplateColumns = `54px repeat(6, 1fr)`;
@@ -208,14 +208,14 @@
 
   /* ── Time labels + grid lines ── */
   for (let h = baseH; h <= endH; h++) {
-    const row = 2 + (h - baseH) * 2;  /* 2 rows per hour */
+    const row = 2 + (h - baseH) * 4;  /* 4 rows per hour */
 
     /* Hour label */
     if (h < endH) {
       const label = document.createElement('div');
       label.className = 'pg-time-label';
       label.textContent = `${h}h`;
-      label.style.cssText = `grid-column:1;grid-row:${row} / ${row + 2};`;
+      label.style.cssText = `grid-column:1;grid-row:${row} / ${row + 4};`;
       grid.appendChild(label);
     }
 
@@ -229,7 +229,7 @@
     if (h < endH) {
       const hhline = document.createElement('div');
       hhline.className = 'pg-hline pg-hline--half';
-      hhline.style.cssText = `grid-column:2 / -1;grid-row:${row + 1};z-index:1;`;
+      hhline.style.cssText = `grid-column:2 / -1;grid-row:${row + 2};z-index:1;`;
       grid.appendChild(hhline);
     }
   }
@@ -266,9 +266,9 @@
       const startMin = toMin(slot.start);
       const endMin   = toMin(slot.end);
 
-      /* Convert minutes to grid rows (2 rows = 1 hour = 60 min, so 1 row = 30 min) */
-      const rowStart = 2 + ((startMin - baseH * 60) / 30);
-      const rowEnd   = 2 + ((endMin   - baseH * 60) / 30);
+      /* Convert minutes to grid rows (4 rows = 1 hour = 60 min, so 1 row = 15 min) */
+      const rowStart = 2 + ((startMin - baseH * 60) / 15);
+      const rowEnd   = 2 + ((endMin   - baseH * 60) / 15);
 
       const el = document.createElement('div');
       el.className = 'pg-slot' + (slot.type ? ` pg-slot--${slot.type}` : '');
@@ -441,6 +441,40 @@
   if (teamGrid && typeof TEAM_DATA !== 'undefined') {
     teamGrid.innerHTML = TEAM_DATA.encadrants.map(teamCard).join('');
   }
+
+  const jugesGrid = document.getElementById('juges-grid');
+  if (jugesGrid && typeof TEAM_DATA !== 'undefined' && TEAM_DATA.juges) {
+    jugesGrid.innerHTML = TEAM_DATA.juges.map(j => {
+      const avatar = j.photo
+        ? `<img src="${j.photo}" alt="${j.nom}">`
+        : `<div class="team-avatar-placeholder" aria-hidden="true">${j.avatar}</div>`;
+      return `
+      <article class="team-card">
+        <div class="team-avatar">${avatar}</div>
+        <h3>${j.nom}</h3>
+        <p>${j.diplome}</p>
+        <span class="team-role">${j.discipline}</span>
+      </article>`;
+    }).join('');
+  }
+})();
+
+/* --- Groupes — liste des gymnases (reads data/groupes.js) --- */
+(function () {
+  const grid = document.getElementById('groupes-grid');
+  if (!grid || typeof GROUPES_DATA === 'undefined') return;
+
+  grid.innerHTML = GROUPES_DATA.map(g => `
+    <article class="groupe-card${g.type ? ' groupe-card--' + g.type : ' groupe-card--comp'}">
+      <div class="groupe-card-header">
+        ${g.nom}
+        ${g.horaires ? `<small>${g.horaires}</small>` : ''}
+      </div>
+      <div class="groupe-card-body">
+        <ul>${g.filles.map(f => `<li>${f}</li>`).join('')}</ul>
+      </div>
+    </article>
+  `).join('');
 })();
 
 /* --- Tarifs (reads data/tarifs.js + data/club.js) --- */
@@ -454,7 +488,7 @@
     const href = card.btn_href === 'helloasso' ? ha : card.btn_href;
     const extAttrs = card.btn_external ? ' target="_blank" rel="noopener noreferrer"' : '';
     return `
-    <article class="tarif-card">
+    <article class="tarif-card${card.type ? ' tarif-card--' + card.type : ''}">
       <div class="tarif-category">${card.categorie}</div>
       <h3 class="tarif-name">${card.nom}</h3>
       <div class="tarif-price"><span>€</span>${card.prix}</div>

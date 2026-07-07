@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Planning des cours — Céret Gym Club</title>
-  <meta name="description" content="Planning des cours 2026/2027 du Céret Gym Club : Gym Artistique Féminine, Parkour, Éveil Gym. Créneaux du lundi au samedi.">
+  <meta name="description" content="Planning des cours du Céret Gym Club : Gym Artistique Féminine, Parkour, Éveil Gym. Créneaux du lundi au samedi.">
   <meta property="og:title" content="Planning — Céret Gym Club">
   <meta property="og:image" content="assets/logo.png">
   <link rel="icon" type="image/png" href="assets/logo.png">
@@ -19,7 +19,7 @@
 
   <header class="page-hero">
     <div class="container">
-      <h1>Planning des cours 2026/2027</h1>
+      <h1>Planning des cours</h1>
       <p>Retrouvez tous nos créneaux hebdomadaires — du lundi au samedi</p>
     </div>
   </header>
@@ -46,6 +46,13 @@
           </button>
         </div>
 
+        <!-- Liste des gymnastes par groupe -->
+        <div style="margin-top:3rem;">
+          <h2 class="section-title" style="text-align:center;">Gymnastes par groupe</h2>
+          <span class="gold-bar" style="margin:0 auto 1.5rem;display:block;"></span>
+          <div id="groupes-grid" class="groupes-grid"></div>
+        </div>
+
         <!-- Infos complémentaires -->
         <div style="margin-top:3rem;padding:2rem;background:var(--gray-100);border-radius:var(--radius);border-left:4px solid var(--gold);">
           <h3 style="color:var(--navy);margin-bottom:1rem;">Informations pratiques</h3>
@@ -66,6 +73,7 @@
   <script src="data/club.js"></script>
   <script src="data/partenaires.js"></script>
   <script src="data/planning.js"></script>
+  <script src="data/groupes.js"></script>
   <script src="assets/js/components.js"></script>
   <script src="assets/js/main.js"></script>
 </body>

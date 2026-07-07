@@ -597,8 +597,10 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.6rem); }
   transition: opacity var(--transition);
 }
 
-.pg-slot--parkour { background: #155c34; border-left-color: #4caf6f; }
-.pg-slot--eveil   { background: #6b3a10; border-left-color: #e0893a; }
+.pg-slot--eveil   { background: #c06227; border-left-color: #e08040; }
+.pg-slot--loisirs { background: #2a8a7e; border-left-color: #5bbdb5; }
+.pg-slot--renfo   { background: #155c34; border-left-color: #4caf6f; }
+.pg-slot--parkour { background: #155c34; border-left-color: #4caf6f; } /* alias renfo */
 .pg-slot--comp    { background: var(--gold); color: var(--navy-dark); border-left-color: rgba(0,0,0,.18); }
 .pg-slot--comp .pg-slot-age { opacity: .65; }
 
@@ -633,10 +635,12 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.6rem); }
   flex-shrink: 0;
 }
 
-.legend-dot--gym    { background: var(--navy); }
-.legend-dot--comp   { background: var(--gold); }
-.legend-dot--parkour{ background: #155c34; }
-.legend-dot--eveil  { background: #6b3a10; }
+.legend-dot--eveil   { background: #c06227; }
+.legend-dot--loisirs { background: #2a8a7e; }
+.legend-dot--renfo   { background: #155c34; }
+.legend-dot--comp    { background: var(--gold); }
+.legend-dot--gym     { background: var(--navy); }
+.legend-dot--parkour { background: #155c34; }
 
 /* =============================================
    TARIFS
@@ -734,6 +738,20 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.6rem); }
   font-weight: 800;
   flex-shrink: 0;
 }
+
+/* Variantes couleur par type */
+.tarif-card--eveil   { border-top-color: #c06227; }
+.tarif-card--eveil   .tarif-category,
+.tarif-card--eveil   .tarif-features li::before { color: #c06227; }
+.tarif-card--loisirs { border-top-color: #2a8a7e; }
+.tarif-card--loisirs .tarif-category,
+.tarif-card--loisirs .tarif-features li::before { color: #2a8a7e; }
+.tarif-card--renfo   { border-top-color: #155c34; }
+.tarif-card--renfo   .tarif-category,
+.tarif-card--renfo   .tarif-features li::before { color: #155c34; }
+.tarif-card--comp    { border-top-color: #c8a951; }
+.tarif-card--comp    .tarif-category,
+.tarif-card--comp    .tarif-features li::before { color: #a07a20; }
 
 .tarif-note {
   background: var(--gray-100);
@@ -1353,7 +1371,7 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.6rem); }
   opacity: .8;
 }
 
-.footer-contact svg { width: 16px; height: 16px; fill: var(--grey); flex-shrink: 0; margin-top: 3px; }
+.footer-contact svg { width: 16px; height: 16px; fill: var(--white); flex-shrink: 0; margin-top: 3px; }
 
 .footer-bottom {
   padding-top: 1.5rem;
@@ -1477,10 +1495,77 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.6rem); }
 }
 
 /* =============================================
+   GROUPES — Liste des gymnases par groupe
+   ============================================= */
+.groupes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 1.1rem;
+}
+
+.groupe-card {
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  background: var(--white);
+}
+
+.groupe-card-header {
+  background: #c0392b;
+  color: #fff;
+  padding: .7rem 1rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: .95rem;
+  line-height: 1.3;
+}
+
+.groupe-card-header small {
+  display: block;
+  font-size: .72rem;
+  font-weight: 400;
+  opacity: .88;
+  margin-top: .2rem;
+}
+
+.groupe-card-body {
+  padding: .75rem 1rem;
+}
+
+.groupe-card-body ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .25rem .6rem;
+  list-style: none;
+}
+
+.groupe-card-body li {
+  font-size: .84rem;
+  color: var(--text);
+}
+
+.groupe-card-body li::before {
+  content: "–";
+  color: #a07a20;
+  margin-right: .3rem;
+  font-weight: 700;
+}
+
+/* Variantes couleur par type de groupe */
+.groupe-card--eveil   .groupe-card-header { background: #c06227; }
+.groupe-card--eveil   .groupe-card-body li::before { color: #c06227; }
+.groupe-card--loisirs .groupe-card-header { background: #2a8a7e; }
+.groupe-card--loisirs .groupe-card-body li::before { color: #2a8a7e; }
+.groupe-card--renfo   .groupe-card-header { background: #155c34; }
+.groupe-card--renfo   .groupe-card-body li::before { color: #155c34; }
+.groupe-card--comp    .groupe-card-header { background: #c8a951; color: var(--navy-dark); }
+.groupe-card--comp    .groupe-card-body li::before { color: #a07a20; }
+
+/* =============================================
    IMPRESSION — Planning PDF
    ============================================= */
 @media print {
-  @page { size: A4 landscape; margin: 12mm; }
+  @page { size: A4 landscape; margin: 10mm; }
 
   body * { visibility: hidden; }
   .planning-grid-wrapper,
@@ -1490,12 +1575,31 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.6rem); }
     position: fixed;
     inset: 0;
     width: 100%;
-    overflow: visible;
+    overflow: hidden;
   }
 
+  .planning-grid {
+    overflow: visible !important;
+    min-width: 0 !important;
+    /* Écrase les hauteurs inline du JS : header 34px + lignes 14px (= 48×14+34 ≈ 706px, tient en A4 paysage) */
+    grid-template-rows: 34px repeat(200, 14px) !important;
+  }
+
+  .pg-header  { position: static !important; }
+  .pg-hline   { display: none !important; }
+
+  .pg-slot      { padding: .2rem .35rem !important; margin: 2px !important; }
+  .pg-slot-name { font-size: .65rem !important; }
+  .pg-slot-age  { font-size: .58rem !important; }
+  .pg-time-label { font-size: .68rem !important; }
+
   /* Forcer les couleurs de fond à l'impression */
-  .pg-slot            { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  .pg-slot--parkour   { background: #155c34 !important; color: #fff !important; }
-  .pg-slot--eveil     { background: #6b3a10 !important; color: #fff !important; }
-  .pg-slot--comp      { background: #c9a84c !important; color: #1a1f4b !important; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .pg-slot                       { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .pg-slot--eveil                { background: #c06227 !important; color: #fff !important; }
+  .pg-slot--loisirs              { background: #2a8a7e !important; color: #fff !important; }
+  .pg-slot--renfo                { background: #155c34 !important; color: #fff !important; }
+  .pg-slot--parkour              { background: #155c34 !important; color: #fff !important; }
+  .pg-slot--comp                 { background: #c8a951 !important; color: #1a1f4b !important; }
+  .pg-slot:not([class*="--"])    { background: #042d6a !important; color: #fff !important; }
 }

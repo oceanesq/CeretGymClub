@@ -8,19 +8,19 @@
 
 const TARIFS_DATA = {
 
-  saison: "septembre 2026 — juin 2027",
+  saison: "2026 - 2027",
 
   cards: [
     {
-      categorie:    "Loisir",
+      categorie:    "Loisirs",
+      type:         "loisirs",
       nom:          "1 cours / semaine",
-      prix:         "À définir",      // Remplacez par le tarif réel, ex: "180"
+      prix:         "200€",      // Remplacez par le tarif réel, ex: "180"
       periode:      "par an · licence incluse",
       features: [
-        "1 séance hebdomadaire",
-        "GAF ou Parkour au choix",
+        "1 séance hebdomadaire | 1h",
+        "GAF",
         "Licence UFOLEP incluse",
-        "Encadrement diplômé",
         "Accès au gala de fin d'année"
       ],
       btn_label:    "S'inscrire",
@@ -29,17 +29,16 @@ const TARIFS_DATA = {
       btn_external: true
     },
     {
-      categorie:    "Loisir",
-      nom:          "2 cours / semaine",
-      prix:         "À définir",
+      categorie:    "N9",
+      type:         "comp",
+      nom:          "1 cours / semaine",
+      prix:         "210€",      // Remplacez par le tarif réel, ex: "180"
       periode:      "par an · licence incluse",
       features: [
-        "2 séances hebdomadaires",
-        "GAF ou Parkour",
+        "1 séance hebdomadaire | 1h",
+        "GAF",
         "Licence UFOLEP incluse",
-        "Encadrement diplômé",
-        "Accès au gala de fin d'année",
-        "Progression accélérée"
+        "Accès au gala de fin d'année"
       ],
       btn_label:    "S'inscrire",
       btn_href:     "helloasso",
@@ -47,47 +46,75 @@ const TARIFS_DATA = {
       btn_external: true
     },
     {
-      categorie:    "Compétition",
-      nom:          "1 cours / semaine",
-      prix:         "À définir",
-      periode:      "par an · sur sélection",
+      categorie:    "Competitions",
+      type:         "comp",
+      nom:          "2 cours / semaine",
+      prix:         "280€",
+      periode:      "par an · licence incluse",
       features: [
-        "1 séance compétition / sem.",
-        "Section GAF compétition",
+        "2 séances hebdomadaires",
+        "GAF ou Parkour",
         "Licence UFOLEP incluse",
-        "Participation aux championnats",
+        "Accès au gala de fin d'année",
         "Tenue de compétition à prévoir"
       ],
-      btn_label:    "Nous contacter",
-      btn_href:     "contact.html",
-      btn_class:    "btn-outline",
-      btn_external: false
+      btn_label:    "S'inscrire",
+      btn_href:     "helloasso",
+      btn_class:    "btn-primary",
+      btn_external: true
     },
     {
-      categorie:    "Compétition",
-      nom:          "2 cours / semaine",
-      prix:         "À définir",
+      categorie:    "Muscu",
+      type:         "comp",
+      nom:          "1 cours / semaine",
+      prix:         "50€",
       periode:      "par an · sur sélection",
       features: [
-        "2 séances compétition / sem.",
-        "Section GAF compétition",
+        "1 séance hebdomadaire",
+        "Cours de musculation",
         "Licence UFOLEP incluse",
-        "Participation aux championnats",
-        "Tenue de compétition à prévoir"
       ],
-      btn_label:    "Nous contacter",
-      btn_href:     "contact.html",
-      btn_class:    "btn-outline",
-      btn_external: false
+      btn_label:    "S'inscrire",
+      btn_href:     "helloasso",
+      btn_class:    "btn-primary",
+      btn_external: true
+    },
+    {
+      categorie:    "Adultes / P3",
+      type:         "renfo",
+      nom:          "1 cours / semaine",
+      prix:         "230€",
+      periode:      "par an · sur sélection",
+      features: [
+        "1 séance hebdomadaire",
+        "Cours de musculation",
+        "Licence UFOLEP incluse",
+      ],
+      btn_label:    "S'inscrire",
+      btn_href:     "helloasso",
+      btn_class:    "btn-primary",
+      btn_external: true
+    },
+    {
+      categorie:    "Eveil et Baby Gym",
+      type:         "eveil",
+      nom:          "1 cours / semaine",
+      prix:         "190€",
+      periode:      "par an · sur sélection",
+      features: [
+        "1 séance hebdomadaire",
+        "GAF / GAM",
+        "Licence UFOLEP incluse",
+      ],
+      btn_label:    "S'inscrire",
+      btn_href:     "helloasso",
+      btn_class:    "btn-primary",
+      btn_external: true
     }
   ],
 
   notes: [
-    {
-      titre: "Réduction famille",
-      texte: "Une remise est appliquée à partir du 2e enfant inscrit dans le même foyer. Contactez-nous pour en bénéficier."
-    },
-    {
+        {
       titre: "Licence UFOLEP",
       texte: "La licence fédérale est incluse dans la cotisation annuelle. Elle couvre l'assurance sportive pour toute la saison."
     },
