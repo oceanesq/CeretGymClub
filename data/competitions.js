@@ -15,20 +15,52 @@ const COMPETITIONS_DATA = {
 
   resultats: [
     {
+      competition: "Compétition nationale",
+      date:        "2026",
+      note:        "Top 5",
+      categorie:   "N6 7–11 ans",
+      gymnaste:    "",
+      photo:       "2026_Nationnales_N6711.jpeg"
+    },
+    {
+      competition: "Compétition nationale",
+      date:        "2026",
+      place:       "2e",
+      categorie:   "N8 7–10 ans",
+      gymnaste:    "",
+      photo:       "2026_Nationnales_N8710.jpeg"
+    },
+    {
+      competition: "Compétition nationale",
+      date:        "2026",
+      place:       "1e",
+      categorie:   "N7 11 ans et +",
+      gymnaste:    "Sophia",
+      photo:       "2026_Nationnales_Sophia.jpeg"
+    },
+    {
+      competition: "Compétition nationale",
+      date:        "2026",
+      place:       "1e",
+      categorie:   "N7 11 ans et +",
+      gymnaste:    "",
+      photo:       "2026_Nationnales_N711.jpeg"
+    },
+    {
+      competition: "Compétition nationale",
+      date:        "2026",
+      place:       "3e",
+      categorie:   "N8 8–14 ans",
+      gymnaste:    "",
+      photo:       "2026_Nationnales_N8814.jpeg"
+    },
+    {
       competition: "Compétition régionnale",
       date:        "Mars 2026",
       place:       "1e",
       categorie:   "N7 11ans et +",
       gymnaste:    "",
-      photo:       "N7_11+.png"
-    },
-    {
-      competition: "Compétition régionnale",
-      date:        "Mars 2026",
-      place:       "2e",
-      categorie:   "N8 4-7 ans",
-      gymnaste:    "Juliette",
-      photo:       "Juliette.png"
+      photo:       "2026_Regionnales_N711.png"
     },
     {
       competition: "Compétition régionnale",
@@ -36,15 +68,7 @@ const COMPETITIONS_DATA = {
       place:       "3e",
       categorie:   "N5 11ans et +",
       gymnaste:    "",
-      photo:       ""
-    },
-    {
-      competition: "Compétition régionnale",
-      date:        "Mars 2026",
-      place:       "3e",
-      categorie:   "N5 11ans et +",
-      gymnaste:    "Lizzy",
-      photo:       ""
+      photo:       "2026_Regionnales_N511.jpeg"
     }
   ]
 

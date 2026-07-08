@@ -42,10 +42,10 @@ const CLUB_DATA = {
 
   /* Chiffres clés affichés sur la page À propos */
   stats: [
-    { num: "80+", label: "Adhérents" },
+    { num: "200+", label: "Adhérents" },
     { num: "2",   label: "Disciplines" },
-    { num: "6",   label: "Entraîneuses" },
-    { num: "12+", label: "Créneaux / semaine" }
+    { num: "5",   label: "Entraîneuses" },
+    { num: "20+", label: "Créneaux / semaine" }
   ]
 
 };

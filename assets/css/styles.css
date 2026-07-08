@@ -1119,6 +1119,26 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.6rem); }
   align-items: start;
 }
 
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.contact-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.75rem 1.5rem;
+  border-top: 3px solid var(--gold);
+}
+
+.contact-card-icon { font-size: 1.8rem; margin-bottom: .75rem; }
+.contact-card h2 { font-size: 1.1rem; color: var(--navy); margin-bottom: .6rem; }
+.contact-card p, .contact-card li { font-size: .9rem; color: var(--gray-700); line-height: 1.6; }
+.contact-card a { color: var(--navy); font-weight: 600; }
+.contact-card a:hover { color: var(--gold); }
+
 .contact-info h2 { margin-bottom: 1.5rem; }
 
 .contact-item {

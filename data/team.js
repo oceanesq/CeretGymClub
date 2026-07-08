@@ -89,7 +89,7 @@ const TEAM_DATA = {
     {
       nom:        "Anouchka",
       diplome:       "BF2 : N8->N1",
-      discipline: "GAF, GAM",
+      discipline: "GAF & GAM",
       avatar:     "🤸",
       photo:      ""
     },
@@ -123,13 +123,6 @@ const TEAM_DATA = {
     },
     {
       nom:        "Lou-Naëlle",
-      diplome:       "BF1 : N8->N7",
-      discipline: "GAF",
-      avatar:     "🤸",
-      photo:      ""
-    },
-    {
-      nom:        "Oceane",
       diplome:       "BF1 : N8->N7",
       discipline: "GAF",
       avatar:     "🤸",

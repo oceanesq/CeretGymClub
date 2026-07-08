@@ -29,9 +29,7 @@ const PLANNING_DEFAULTS = {
   "PE1 - N9":          { type: "comp",    age: "Grandes" },
   "PE2 - N9":          { type: "comp",    age: "Jeunes" },
   "PE":                { type: "comp",    age: "" },
-  "Muscu1":            { type: "comp",    age: "Grandes" },
-  "Muscu2":            { type: "comp",    age: "Jeunes" },
-  "Muscu":             { type: "comp",    age: "" },
+  "Muscu1 / Muscu2":   { type: "comp",    age: "1 sem / 2" },
   /* Loisirs */
   "L1":                { type: "loisirs", age: "5–6 ans" },
   "L2":                { type: "loisirs", age: "7–8 ans" },
@@ -46,7 +44,7 @@ const PLANNING_DATA = {
   "Lundi": [
     { start: "17:15", end: "18:30", name: "PE" },
     { start: "18:30", end: "19:30", name: "L4" },
-    { start: "19:30", end: "20:30", name: "Muscu" }
+    { start: "19:30", end: "20:30", name: "Muscu1 / Muscu2" }
   ],
   "Mardi": [
     { start: "17:15", end: "18:45", name: "EVO1N2 - N8" },
