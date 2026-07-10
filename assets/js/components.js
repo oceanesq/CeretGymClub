@@ -25,6 +25,7 @@ function buildNavbar() {
       <li><a href="index.html">Accueil</a></li>
       <li><a href="planning.html">Planning</a></li>
       <li><a href="tarifs.html">Tarifs</a></li>
+      <li><a href="boutique.html">Boutique</a></li>
       <li><a href="actualites.html">Actualités</a></li>
       <li><a href="apropos.html">À propos</a></li>
       <li><a href="galerie.html">Galerie</a></li>
@@ -77,6 +78,7 @@ function buildFooter() {
           <a href="index.html">Accueil</a>
           <a href="planning.html">Planning</a>
           <a href="tarifs.html">Tarifs</a>
+          <a href="boutique.html">Boutique</a>
           <a href="actualites.html">Actualités</a>
           <a href="apropos.html">À propos</a>
           <a href="galerie.html">Galerie</a>
