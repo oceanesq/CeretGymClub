@@ -261,18 +261,46 @@
 
   /* ── Slots ── */
   days.forEach((day, colIdx) => {
-    (PLANNING_DATA[day] || []).forEach(raw => {
-      const slot = resolveSlot(raw);
-      const startMin = toMin(slot.start);
-      const endMin   = toMin(slot.end);
+    const slots = (PLANNING_DATA[day] || [])
+      .map(resolveSlot)
+      .map(slot => ({ ...slot, startMin: toMin(slot.start), endMin: toMin(slot.end) }))
+      .sort((a, b) => a.startMin - b.startMin || a.endMin - b.endMin);
 
+    /* Assign each slot a sub-column so overlapping slots sit side by side
+       instead of stacking on top of each other. */
+    function layoutCluster(items) {
+      if (!items.length) return;
+      const colEnds = []; /* end time currently occupying each sub-column */
+      items.forEach(slot => {
+        let col = colEnds.findIndex(end => end <= slot.startMin);
+        if (col === -1) { col = colEnds.length; colEnds.push(slot.endMin); }
+        else colEnds[col] = slot.endMin;
+        slot._col = col;
+      });
+      items.forEach(slot => { slot._cols = colEnds.length; });
+    }
+
+    let cluster = [], clusterEnd = -Infinity;
+    slots.forEach(slot => {
+      if (slot.startMin >= clusterEnd) { layoutCluster(cluster); cluster = []; clusterEnd = -Infinity; }
+      cluster.push(slot);
+      clusterEnd = Math.max(clusterEnd, slot.endMin);
+    });
+    layoutCluster(cluster);
+
+    slots.forEach(slot => {
       /* Convert minutes to grid rows (4 rows = 1 hour = 60 min, so 1 row = 15 min) */
-      const rowStart = 2 + ((startMin - baseH * 60) / 15);
-      const rowEnd   = 2 + ((endMin   - baseH * 60) / 15);
+      const rowStart = 2 + ((slot.startMin - baseH * 60) / 15);
+      const rowEnd   = 2 + ((slot.endMin   - baseH * 60) / 15);
+      const cols = slot._cols || 1;
 
       const el = document.createElement('div');
       el.className = 'pg-slot' + (slot.type ? ` pg-slot--${slot.type}` : '');
-      el.style.cssText = `grid-column:${colIdx + 2};grid-row:${rowStart} / ${rowEnd};`;
+      let style = `grid-column:${colIdx + 2};grid-row:${rowStart} / ${rowEnd};`;
+      if (cols > 1) {
+        style += `position:relative;width:calc(${100 / cols}% - 4px);left:calc(${100 / cols}% * ${slot._col});`;
+      }
+      el.style.cssText = style;
       el.dataset.group = slot.name;
       el.setAttribute('role', 'article');
       el.setAttribute('aria-label', `${slot.name} — ${slot.start.replace(':','h')}–${slot.end.replace(':','h')} — ${slot.age}`);
@@ -323,6 +351,53 @@
   /* ── Télécharger PDF ── */
   const btnPdf = document.getElementById('btn-pdf');
   if (btnPdf) btnPdf.addEventListener('click', () => window.print());
+})();
+
+/* --- Mentions légales / Politique de confidentialité (reads data/club.js) --- */
+(function () {
+  if (typeof CLUB_DATA === 'undefined') return;
+  const c = CLUB_DATA;
+  const legal = c.legal || {};
+  const heberg = legal.hebergeur || {};
+  const fallback = (v) => v && String(v).trim() ? v : 'À compléter';
+
+  const set = (id, value) => {
+    const el = document.getElementById(id);
+    if (el) el.textContent = value;
+  };
+
+  /* Mentions légales */
+  if (document.getElementById('legal-nom')) {
+    set('legal-nom', c.nom);
+    set('legal-forme', fallback(legal.formeJuridique));
+    const adresseEl = document.getElementById('legal-adresse');
+    if (adresseEl) adresseEl.innerHTML = `${c.adresse.rue}<br>${c.adresse.codePostal} ${c.adresse.ville}`;
+    set('legal-rna', fallback(legal.rna));
+    set('legal-siret', fallback(legal.siret));
+    set('legal-directeur', fallback(legal.directeurPublication));
+
+    const emailEl = document.getElementById('legal-email');
+    if (emailEl) { emailEl.href = 'mailto:' + c.email; emailEl.textContent = c.email; }
+
+    const telRow = document.getElementById('legal-tel-row');
+    if (telRow) {
+      if (c.telephone) set('legal-tel', c.telephone);
+      else telRow.style.display = 'none';
+    }
+
+    set('legal-heberg-nom', 'Hébergeur : ' + fallback(heberg.nom));
+    set('legal-heberg-adresse', fallback(heberg.adresse));
+    set('legal-heberg-site', fallback(heberg.site));
+  }
+
+  /* Politique de confidentialité */
+  if (document.getElementById('conf-nom')) {
+    set('conf-nom', c.nom);
+    ['conf-email', 'conf-email-2'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) { el.href = 'mailto:' + c.email; el.textContent = c.email; }
+    });
+  }
 })();
 
 /* --- News cards builder (reads data/actualites.js + data/competitions.js) --- */
@@ -566,6 +641,26 @@
   if (horairesEl && c.horaires_contact)
     horairesEl.innerHTML = c.horaires_contact.map(h => `<li>${h}</li>`).join('');
 
+  /* Carte Google Maps — chargée uniquement après consentement aux cookies */
   const mapEl = document.getElementById('contact-map');
-  if (mapEl && c.maps_embed) mapEl.src = c.maps_embed;
+  const mapPlaceholder = document.getElementById('map-consent-placeholder');
+  const mapBtn = document.getElementById('map-consent-btn');
+  if (mapEl && c.maps_embed && mapPlaceholder) {
+    function renderMapState() {
+      const status = (typeof window.CGC_COOKIES !== 'undefined') ? window.CGC_COOKIES.get() : null;
+      if (status === 'accepted') {
+        if (!mapEl.dataset.loaded) { mapEl.src = c.maps_embed; mapEl.dataset.loaded = '1'; }
+        mapEl.style.display = 'block';
+        mapPlaceholder.classList.add('hidden');
+      } else {
+        mapEl.style.display = 'none';
+        mapPlaceholder.classList.remove('hidden');
+      }
+    }
+    renderMapState();
+    window.addEventListener('cgc:consent-changed', renderMapState);
+    if (mapBtn) mapBtn.addEventListener('click', () => {
+      if (typeof window.CGC_COOKIES !== 'undefined') window.CGC_COOKIES.openBanner();
+    });
+  }
 })();

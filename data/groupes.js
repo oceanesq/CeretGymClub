@@ -9,29 +9,24 @@
 
 const GROUPES_DATA = [
   {
-    nom: "EVO2 N3",
-    horaires: "Mer 15h45–16h45 · Sam 13h–14h30",
-    filles: ["Calhy", "Zoé", "Lara", "Leticia", "Louna", "Lizzy"]
+    nom: "EVO2N3",
+    horaires: "Mer 15h15–16h45 · Sam 13h–14h30",
+    filles: ["Calhy", "Zoé", "Lara", "Leticia", "Louna", "Lizzy", "Maeva", "Radha", "Dorian", "Joan"]
   },
   {
-    nom: "EVO2 N2",
+    nom: "EVO2N2.1",
     horaires: "Mer 13h45–15h15 · Sam 14h30–16h",
-    filles: ["Marie", "Charline", "Eva", "Jasmine", "Ylena", "Elora"]
+    filles: ["Marie", "Charline", "Eva", "Jasmine", "Ylena", "Elora", "Jeanne", "Lola", "Loyane","Lou-Naëlle","Sofia"]
   },
   {
-    nom: "EVO2 N1 – G",
+    nom: "EVO1N2",
     horaires: "Mar & Ven 18h45–20h15",
-    filles: ["Jeanne Borg", "Lou-Naëlle", "Naïla", "Sofia", "Lola", "Layanna"]
+    filles: ["Lou Anne","Juliette", "Gina", "Rachel","Zoé","Bina","Laora","Elise","Célénia","Maëlie","Lucie"]
   },
   {
-    nom: "EVO2 N1 – J",
-    horaires: "Mar & Ven 18h45–20h15",
-    filles: ["Lou Anne", "Angelina", "Juliette", "Gina", "Juliana", "Rachel"]
-  },
-  {
-    nom: "EVO2 N1 – P",
+    nom: "EVO2N1/EVO1N2",
     horaires: "Mer 12h15–13h45 · Sam 16h–17h30",
-    filles: ["Elena", "Jeanne S.", "Léa", "Jeanne B.", "Noémie", "Romane", "Sianna"]
+    filles: ["Elena", "Jeanne S.", "Léa", "Jeanne B.", "Noémie", "Romane", "Sianna", "Solizia","Emilie","Oriane","Héloïse"]
   },
   {
     nom: "EVO N",
@@ -39,14 +34,9 @@ const GROUPES_DATA = [
     filles: ["Zoé G.", "Maëly", "Laora", "Lucie", "Elise", "Emmie"]
   },
   {
-    nom: "EVO1 N2 – Mar/Ven",
-    horaires: "Mar 17h15–18h45 · Ven 17h15–18h45",
-    filles: ["Dina", "Léna", "Léa P.", "Tessa", "Lou B.", "Emilie"]
-  },
-  {
-    nom: "EVO1 N2 – Mer/Sam",
-    horaires: "Mer 12h15–13h45 · Sam 16h–17h30",
-    filles: ["Soizia", "Thaïs", "Orianne", "Lyria", "Emilie", "Héloïse", "Julia", "Rosa", "Emma", "Typhaine", "Meritxell", "Lou P."]
+    nom: "EVO1N1",
+    horaires: "Mar & Ven 17h15–18h45",
+    filles: ["Thaïs", "Lyria", "Julia", "Rosa", "Emma", "Typhaine", "Meritxell", "Lou P.","Lou B.","Léna","Tessa","Léa"]
   },
   {
     nom: "P.E",

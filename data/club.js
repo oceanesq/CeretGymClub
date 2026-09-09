@@ -23,6 +23,20 @@ const CLUB_DATA = {
 
   /* Contact */
   email: "asso.ceretgymclub@gmail.com",
+  telephone: "", // Ex : "04 68 XX XX XX" — laissez vide pour ne pas l'afficher
+
+  /* Informations légales (mentions légales / RGPD) — à compléter */
+  legal: {
+    formeJuridique: "Association loi 1901",
+    rna:  "W661000420",              // Numéro RNA (ex : W661234567) — https://www.data-asso.fr
+    siret: "42478700000050",             // Numéro SIRET si l'association en possède un
+    directeurPublication: "Maelya", // Nom du/de la président·e ou responsable de publication
+    hebergeur: {
+      nom:     "Netlify",          // Ex : "Netlify, Inc."
+      adresse: "",
+      site:    ""
+    }
+  },
 
   /* Horaires de présence au club (pour la page contact) */
   horaires_contact: [
@@ -34,7 +48,7 @@ const CLUB_DATA = {
   /* Réseaux sociaux — remplacez "#" par l'URL réelle */
   reseaux: {
     instagram: "https://www.instagram.com/ceret_gym_club/",
-    facebook:  "https://www.facebook.com/ceretgymclub/?locale=fr_FR"
+    facebook:  "https://www.facebook.com/share/1RHmo29iyX/?mibextid=wwXIfr"
   },
 
   /* URL iframe Google Maps pour la page contact */

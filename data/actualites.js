@@ -7,24 +7,24 @@
 
 const ACTUALITES_DATA = [
   {
-    id: "inscription-2026-2027",
-    title: "Inscriptions 2026/2027 ouvertes sur HelloAsso",
-    date: "bientot disponnible",
+    id: "assemblee-generale",
+    title: "Assemblée Générale",
+    date: "25/09/2026",
     category: "Événement",
     lieu: "",
     emoji: "📋",
-    image: "assets/evenements/reinscriptions.png",
-    excerpt: "Les inscriptions pour la saison 2026/2027 sont bientot ouvertes en ligne sur HelloAsso. Toutes les disciplines, tous les niveaux. N'attendez pas, les places sont limitées !"
+    image: "",
+    excerpt: "Venez choisir le prochain bureau du club !"
   },
   {
-    id: "gala-2027",
-    title: "Gala de fin d'année",
-    date: "date bientot disponnible",
+    id: "reservation-justaucorps",
+    title: "Réservations justaucorps",
+    date: "avant le 30/09/2026",
     category: "Événement",
-    lieu: "Gymnase Fond Calde",
-    emoji: "🎪",
-    image: "assets/evenements/spectacle.png",
-    excerpt: "Le gala annuel du Céret Gym Club sur le thème de l'Amérique !"
+    lieu: "",
+    emoji: "🏃",
+    image: "",
+    excerpt: "Venez choisir le prochain bureau du club !"
   },
   {
     id: "loto d'halloween",
@@ -45,5 +45,25 @@ const ACTUALITES_DATA = [
     emoji: "🏃",
     image: "assets/evenements/stage.png",
     excerpt: ""
+  },
+  {
+    id: "fete-noel",
+    title: "Fête de noël",
+    date: "date bientot disponnible",
+    category: "Événement",
+    lieu: "Gymnase Fond Calde",
+    emoji: "🎪",
+    image: "",
+    excerpt: "La fête de Noël du Céret Gym Club !"
+  },
+  {
+    id: "gala-2027",
+    title: "Gala de fin d'année",
+    date: "date bientot disponnible",
+    category: "Événement",
+    lieu: "Gymnase Fond Calde",
+    emoji: "🎪",
+    image: "assets/evenements/spectacle.png",
+    excerpt: "Le gala annuel du Céret Gym Club sur le thème de l'Amérique !"
   }
 ];

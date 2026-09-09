@@ -109,6 +109,11 @@ function buildFooter() {
     </div>
     <div class="footer-bottom">
       <p>© ${new Date().getFullYear()} Céret Gym Club — Association loi 1901 — Affiliée UFOLEP</p>
+      <nav class="footer-legal" aria-label="Mentions légales">
+        <a href="mentions-legales.html">Mentions légales</a>
+        <a href="confidentialite.html">Politique de confidentialité</a>
+        <a href="#" id="cookie-settings-link">Gérer les cookies</a>
+      </nav>
     </div>
   </div>
 </footer>

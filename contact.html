@@ -8,9 +8,6 @@
   <meta property="og:title" content="Contact — Céret Gym Club">
   <meta property="og:image" content="assets/logo.png">
   <link rel="icon" type="image/png" href="assets/logo.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
@@ -57,14 +54,18 @@
             </div>
         </div>
 
-        <!-- Carte Google Maps (src mis à jour depuis data/club.js) -->
-        <div class="map-container" aria-label="Carte de localisation du club">
+        <!-- Carte Google Maps (src mis à jour depuis data/club.js, chargée uniquement après consentement aux cookies) -->
+        <div class="map-container" id="map-container" aria-label="Carte de localisation du club">
+          <div class="map-consent-placeholder" id="map-consent-placeholder">
+            <p>La carte Google Maps nécessite votre consentement pour se charger (transmission de votre adresse IP à Google).</p>
+            <button type="button" class="btn btn-primary" id="map-consent-btn">Afficher la carte</button>
+          </div>
           <iframe
             id="contact-map"
             src=""
             width="100%"
             height="400"
-            style="border:0;"
+            style="border:0;display:none;"
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
@@ -80,6 +81,7 @@
 
   <script src="data/club.js"></script>
   <script src="data/partenaires.js"></script>
+  <script src="assets/js/cookie-consent.js"></script>
   <script src="assets/js/components.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
