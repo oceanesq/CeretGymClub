@@ -24,7 +24,7 @@ const ACTUALITES_DATA = [
     lieu: "",
     emoji: "🏃",
     image: "",
-    excerpt: "Venez choisir le prochain bureau du club !"
+    excerpt: "Achetez vos justaucorps avant le 30 septembre 2026 !"
   },
   {
     id: "loto d'halloween",

@@ -18,14 +18,14 @@ const TEAM_DATA = {
     },
     {
       nom:          "Celine",
-      role:         "Comptable",
+      role:         "Tresoriere",
       organisation: "Céret Gym Club",
       avatar:       "👩",
       photo:        ""
     },
     {
       nom:          "Audrey",
-      role:         "Trésoriere",
+      role:         "Secretaire",
       organisation: "Céret Gym Club",
       avatar:       "👩",
       photo:        ""
@@ -53,27 +53,6 @@ const TEAM_DATA = {
       role:       "Entraîneuse",
       discipline: "Gymnasique Artistique Féminine & Parkour",
       avatar:     "🤸",
-      photo:      ""
-    },
-    {
-      nom:        "Radha",
-      role:       "Entraîneuse",
-      discipline: "Gymnasique Artistique Féminine & Parkour",
-      avatar:     "🤸",
-      photo:      ""
-    },
-    {
-      nom:        "Zoe",
-      role:       "Aide-entraîneuse",
-      discipline: "Gymnasique Artistique Féminine",
-      avatar:     "⭐",
-      photo:      ""
-    },
-    {
-      nom:        "Lucie",
-      role:       "Aide-entraîneuse",
-      discipline: "Gymnasique Artistique Féminine",
-      avatar:     "⭐",
       photo:      ""
     }
      /* Ajoutez d'autres aides entraineuses ici, ex :

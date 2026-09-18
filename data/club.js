@@ -30,11 +30,11 @@ const CLUB_DATA = {
     formeJuridique: "Association loi 1901",
     rna:  "W661000420",              // Numéro RNA (ex : W661234567) — https://www.data-asso.fr
     siret: "42478700000050",             // Numéro SIRET si l'association en possède un
-    directeurPublication: "Maelya", // Nom du/de la président·e ou responsable de publication
+    directeurPublication: "Maelya PILLAULT", // Nom du/de la président·e ou responsable de publication
     hebergeur: {
       nom:     "Netlify",          // Ex : "Netlify, Inc."
       adresse: "",
-      site:    ""
+      site:    "ceretgymclub.com"
     }
   },
 

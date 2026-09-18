@@ -4,7 +4,7 @@
    ============================================= */
 
 const PARTENAIRES_DATA = [
-  {
+  /*{
     name: "Pâtisserie Touron",
     location: "Arles-sur-Tech",
     url: "https://www.patisserie-touron.com",
@@ -43,5 +43,5 @@ const PARTENAIRES_DATA = [
     emoji: "🏗️",
     logo: "logo_Privat-Bartho.jpg",
     description: "Maçonnerie générale & rénovation"
-  }
+  }*/
 ];
