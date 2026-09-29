@@ -58,7 +58,7 @@ const CLUB_DATA = {
   stats: [
     { num: "200+", label: "Adhérents" },
     { num: "2",   label: "Disciplines" },
-    { num: "5",   label: "Entraîneuses" },
+    { num: "2",   label: "Entraîneuses" },
     { num: "20+", label: "Créneaux / semaine" }
   ]
 

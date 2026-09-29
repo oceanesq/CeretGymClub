@@ -7,27 +7,7 @@
 
 const ACTUALITES_DATA = [
   {
-    id: "assemblee-generale",
-    title: "Assemblée Générale",
-    date: "25/09/2026",
-    category: "Événement",
-    lieu: "",
-    emoji: "📋",
-    image: "",
-    excerpt: "Venez choisir le prochain bureau du club !"
-  },
-  {
-    id: "reservation-justaucorps",
-    title: "Réservations justaucorps",
-    date: "avant le 30/09/2026",
-    category: "Événement",
-    lieu: "",
-    emoji: "🏃",
-    image: "",
-    excerpt: "Achetez vos justaucorps avant le 30 septembre 2026 !"
-  },
-  {
-    id: "loto d'halloween",
+    id: "loto",
     title: "loto du club",
     date: "date bientot disponnible",
     category: "Événement",
@@ -53,7 +33,7 @@ const ACTUALITES_DATA = [
     category: "Événement",
     lieu: "Gymnase Fond Calde",
     emoji: "🎪",
-    image: "",
+    image: "assets/evenements/fetenoel.png",
     excerpt: "La fête de Noël du Céret Gym Club !"
   },
   {
